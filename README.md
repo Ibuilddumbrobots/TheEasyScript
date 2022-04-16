@@ -1,4 +1,4 @@
-##GETTING STARTED##
+## GETTING STARTED ##
 sudo bash install.sh
 
 ## USING THE SCRIPT ##
