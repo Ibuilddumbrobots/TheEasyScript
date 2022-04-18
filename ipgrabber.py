@@ -1,20 +1,10 @@
 # Imports
 import socket
-
+import pyfiglet
+from termcolor import colored
 # Starter Code
-print('                                           ')
-print(' =================  ||==============||     ')
-print('        ||          ||              ||     ')
-print('        ||          ||              ||     ')
-print('        ||          ||              ||     ')
-print('        ||          ||              ||     ')
-print('        ||          ||==============||     ')
-print('        ||          ||                     ')
-print('        ||          ||                     ')
-print('        ||          ||                     ')
-print('        ||          ||                     ')
-print('        ||          ||                     ')
-print(' =================')
+banner = pyfiglet.figlet_format("IP SCANNER")
+print(colored(banner, 'red'))
 
 
 

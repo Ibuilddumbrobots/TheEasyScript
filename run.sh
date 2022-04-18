@@ -1,21 +1,15 @@
+#!/bin/bash
+
 command clear
 
-echo "                                                                          
-        ===============     =====================  
-              ||            ||
-              ||            ||
-              ||            ||
-              ||            ||
-              ||            ====================
-              ||            ||
-              ||            ||
-              ||            ||       
-              ||            ||
-              ||            =====================
-              
-              
-              
-                                                         "
+python - << EOF
+import pyfiglet
+from termcolor import colored
+
+banner = pyfiglet.figlet_format("THE EASY SCRIPT")
+print(colored(banner, 'white'))
+
+EOF
 
 echo "For help type in help"
 
@@ -90,6 +84,12 @@ do
         echo "macchanger"
         echo "reaver"
         echo "ipg" 
+        echo "exit"
+        echo "ps"
+        echo "wva"
+        echo "md5"
+        echo "sha1"
+        
     fi      
 
     if [ $command == "ipg" ];then
@@ -99,6 +99,29 @@ do
 
     if [ $command == "exit" ];then
         exit 1
+
+    fi
+
+    if [ $command == "ps" ];then
+        sudo bash portscanner.sh
+
+    fi
+
+    if [ $command == "wva" ];then
+        echo "What is the host URL:"
+
+        read URL
+
+        sudo nikto -h $URL
+
+    fi
+
+    if [ $command == "md5" ];then
+        sudo python3 md5.py
+    fi
+
+    if [ $command == "sha1" ];then
+        sudo python3 sha1.py
 
     fi
 
